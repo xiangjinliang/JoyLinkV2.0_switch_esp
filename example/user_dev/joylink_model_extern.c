@@ -23,6 +23,7 @@
 
 #ifdef __ESP32__
 #include <stdint.h>
+
 #endif
 
 #include <fcntl.h> 
@@ -55,7 +56,11 @@ jl2_d_idt_t user_idt =
 
 /*E_JLDEV_TYPE_GW*/
 #ifdef _SAVE_FILE_
+#if defined(__ESP32__)
+char  *file = "/spiffs/joylink_info.txt";
+#else
 char  *file = "joylink_info.txt";
+#endif
 #endif
 
 extern int joylink_parse_jlp(JLPInfo_t *jlp, char * pMsg);
@@ -207,9 +212,17 @@ joylink_dev_set_attr_jlp(JLPInfo_t *jlp)
 	memcpy(&user_jlp, jlp, sizeof(JLPInfo_t));
 #ifdef _SAVE_FILE_
 	FILE *outfile;
-	outfile = fopen("joylink_info.txt", "wb+" );
-	fwrite(&user_jlp, sizeof(JLPInfo_t), 1, outfile );
-	fclose(outfile);
+	outfile = fopen(file, "wb+" );
+    if (NULL != outfile)
+    {
+        fwrite(&user_jlp, sizeof(JLPInfo_t), 1, outfile );
+        fclose(outfile);
+    }
+    else
+    {        
+        log_info("open the file(%s) is failed,when write.",file);
+    }
+
 #endif
 
 #endif	
@@ -338,16 +351,29 @@ joylink_dev_get_jlp_info(JLPInfo_t *jlp)
 #ifdef _SAVE_FILE_
 	FILE *infile;
 	infile = fopen(file, "rb+");
-	fread(&fjlp, sizeof(fjlp), 1, infile);
-	fclose(infile);
+	if(infile != NULL)
+    {	
+        fread(&fjlp, sizeof(fjlp), 1, infile);
+    	fclose(infile);
 
-	strcpy(user_jlp.feedid, fjlp.feedid);
-	strcpy(user_jlp.accesskey, fjlp.accesskey);
-	strcpy(user_jlp.localkey, fjlp.localkey);
-	strcpy(user_jlp.joylink_server, fjlp.joylink_server);
-	user_jlp.server_port = fjlp.server_port;
+    	strcpy(user_jlp.feedid, fjlp.feedid);
+    	strcpy(user_jlp.accesskey, fjlp.accesskey);
+    	strcpy(user_jlp.localkey, fjlp.localkey);
+    	strcpy(user_jlp.joylink_server, fjlp.joylink_server);
+    	user_jlp.server_port = fjlp.server_port;
+        
+        log_info("get device attr_jlp:\n");
+        log_info("feedid: %s\n", jlp->feedid);
+        log_info("accesskey:%s\n", jlp->accesskey);
+        log_info("localkey: %s\n", jlp->localkey);
+        log_info("severs: %s:%d", jlp->joylink_server, jlp->server_port);
+    }
+    else
+    {
+        log_info("get the file(%s) is failed.",file);
+
+    }
 #endif
-    //strcpy(user_jlp.feedid,"154185616256512067");
     
 	strcpy(jlp->feedid, user_jlp.feedid);
 	strcpy(jlp->accesskey, user_jlp.accesskey);

@@ -27,6 +27,8 @@
 #include "lwip/sys.h"
 #include "lwip/netdb.h"
 #include "lwip/dns.h"
+#include "esp_spiffs.h"
+#include "esp_vfs_fat.h"
 
 //jd SDK
 #if defined(__OV_788__)
@@ -54,74 +56,68 @@
 #include "joylink_sdk.h"
 #include "joylink_task.h"
 
-void joylink_auto_test(char *sv_name)
-{ 
-    sv_name = sv_name;
-}
-
-void 
-joylink_task_test_cb(jl_list_head_t *lh, jl_task_mg_t *pmg)
-{    
-#ifdef _GATEWAY_PROC_
-
-#else
-    //joylink_test_thread_comm();
-    //joylink_ui_test();
-#endif
-
-#ifdef GATEWAY_SQLITE
-    /*joylink_sql_test();*/
-#endif
-#ifdef _TEST_LOCK_
-    /*joylink_lock_ctrl();*/
-#endif
-    /*char v1, v2, v3;*/
-    /*joylink_util_get_vermber(&v1, &v2, &v3);*/
-    /*joylink_log_info("joylink version:%d.%d.%d :hexv:0X%x", v1, v2, v3, ((v1 << 8) | v2) );*/
-
-    // joylink_test_ui_thread_test();
-    /*joylink_ifttt_test();*/
-    joylink_auto_test("com.joylink.light");
-    // joylink_test_create_session_key();
-    // joylink_about_test();
-    // joylink_test_thunderconfig();
-
-    /*long tv = joylink_app_get_dev_time();*/
-    
-    /*joylink_app_set_dev_time(tv);*/
-
-    // joylink_test_service_config();
-#ifdef _PAIR_ 
-/*#ifndef __ANDROID__*/
-#ifdef _DEBUG_PROXY_
-#endif
-#endif
-
-	/*char guid[JL_MAX_LEN_GUID] = {0};*/
-	/*if(E_OK != joylink_app_get_self_guid(guid)){*/
-		/*joylink_log_error("guid is null");*/
-	/*}*/
-    /*char *properties = joylink_package_all_pro(); */
-
-    /*joylink_cloud_gateway_report_snapshot(guid, "com.joylink.light", properties);*/
-    
-    /*if(NULL != properties){*/
-        /*joylink_util_free(properties);*/
-    /*}*/
-}
-
-int joylink_task_test()
+#if 1
+/* 初始化SPI文件系统 */
+int initvfs_Spiffs(void)
 {
-   jl_task_mg_t tmg;
-   jl_task_data_t tdata;
+    esp_vfs_spiffs_conf_t conf = {
+      .base_path = "/spiffs",
+      .partition_label = NULL,
+      .max_files = 5,
+      .format_if_mount_failed = true
+    };
 
-   memset(&tmg, 0, sizeof(jl_task_mg_t));
-   memset(&tdata, 0, sizeof(jl_task_data_t));
-   tmg.ttl = JL_MAX_TTL;
+    printf("begin to mount or format filesystem..\n");
 
-   joylink_task_add(&tmg, &tdata, joylink_task_test_cb, NULL);
-   return E_OK;
+    
+    esp_err_t ret = esp_vfs_spiffs_register(&conf);
+
+    if (ret != ESP_OK) {
+        if (ret == ESP_FAIL) {
+            printf("Failed to mount or format filesystem\n");
+        } else if (ret == ESP_ERR_NOT_FOUND) {
+            printf("Failed to find SPIFFS partition\n");
+        } else {
+            printf("Failed to initialize SPIFFS (%s)\n", esp_err_to_name(ret));
+        }
+        return;
+    }
+    
+    size_t total = 0, used = 0;
+    ret = esp_spiffs_info(NULL, &total, &used);
+    if (ret != ESP_OK) {
+        printf("Failed to get SPIFFS partition information (%s)\n", esp_err_to_name(ret));
+    } else {
+        printf("Partition size: total: %d, used: %d\n", total, used);
+    }
+
+    printf("end to mount or format filesystem..\n");
+    
 }
+#else
+
+
+#define MOUNT_PATH "/spiflash"
+
+static void initialize_filesystem()
+{
+    printf("begin to mount or fatfs filesystem..\n");
+
+    static wl_handle_t wl_handle;
+    const esp_vfs_fat_mount_config_t mount_config = {
+        .max_files = 4,
+        .format_if_mount_failed = true,
+        .allocation_unit_size = CONFIG_WL_SECTOR_SIZE
+    };
+    esp_err_t err = esp_vfs_fat_spiflash_mount(MOUNT_PATH, "storage", &mount_config, &wl_handle);
+    if (err != ESP_OK) {
+        printf("Failed to mount FATFS (%s)\n", esp_err_to_name(err));
+        return;
+    }
+    
+    printf("end to mount or fatfs filesystem..\n");
+}
+#endif
 
 //调用joylink主线程
 extern int  joylink_main_start();
@@ -133,7 +129,8 @@ static void runJoylink(void *pvParameters)
     waitWifiConnect();
 
     vTaskDelay(1000/ portTICK_PERIOD_MS);
-
+    //initialize_filesystem();
+    initvfs_Spiffs();
 
     /*
      *Start main loop
@@ -141,24 +138,6 @@ static void runJoylink(void *pvParameters)
     printf("xiangjl start task begin...");   
     joylink_main_start();
 
-    
-    #if 0
-    int once = 0;
-    while(1){
-        
-        joylink_main_loop();
-        /*
-         *Start a test task.
-         */
-        if(!once){
-            once = 1;
-            //joylink_task_test();
-        }
-        vTaskDelay(100);
-    };
-
-    joylink_main_finit();
-    #endif
 }
 static void runPrintLocalIP(void *pvParameters)
 {

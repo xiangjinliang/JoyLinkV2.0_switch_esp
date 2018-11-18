@@ -1,5 +1,5 @@
 light_main.o: \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/light_main.c \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/light_main.c \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdio.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/_ansi.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/newlib.h \
@@ -22,7 +22,7 @@ light_main.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdint.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -79,7 +79,7 @@ light_main.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/limits.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/list.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/debug_def.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/debug_def.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
@@ -124,7 +124,7 @@ light_main.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_event.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/wifi_init.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/wifi_init.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_event_loop.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/log/include/esp_log.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/log/include/esp_log_internal.h \
@@ -133,19 +133,40 @@ light_main.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/sys.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/netdb.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/dns.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_auth.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_ret_code.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_net.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_list.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_list_basic.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_utils.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_sdk.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_rpc.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_app_cb.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_utils.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_task.h
+ /home/jdwl/ESP32/IDF/esp-idf/components/spiffs/include/esp_spiffs.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/esp_vfs_fat.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdmmc_types.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdmmc_host.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdmmc_types.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdspi_host.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/spi_master.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/lldesc.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/queue.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/ff.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/integer.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/ffconf.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/param.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/syslimits.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/endian.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/param.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/wear_levelling/include/wear_levelling.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_partition.h \
+ /home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_auth.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_ret_code.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_net.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_list.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_list_basic.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_utils.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_sdk.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_rpc.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_app_cb.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_utils.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_task.h
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdio.h:
 
@@ -191,7 +212,7 @@ light_main.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -305,7 +326,7 @@ light_main.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/debug_def.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/debug_def.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/sockets.h:
 
@@ -395,7 +416,7 @@ light_main.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_event.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/wifi_init.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/wifi_init.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_event_loop.h:
 
@@ -413,29 +434,71 @@ light_main.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/dns.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/spiffs/include/esp_spiffs.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_auth.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/esp_vfs_fat.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_ret_code.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdmmc_types.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_net.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdmmc_host.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_list.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdmmc_types.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_list_basic.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/sdspi_host.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_utils.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/spi_master.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_sdk.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/spi_common.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_rpc.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/lldesc.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_app_cb.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/queue.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_utils.h:
+/home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/ff.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/include/joylink_task.h:
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/./light_main.c:
+/home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/integer.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/fatfs/src/ffconf.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/param.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/syslimits.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/endian.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/param.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/wear_levelling/include/wear_levelling.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_partition.h:
+
+/home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_auth.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_ret_code.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_net.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_list.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_list_basic.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_utils.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_sdk.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_rpc.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_app_cb.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_utils.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_task.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/./light_main.c:

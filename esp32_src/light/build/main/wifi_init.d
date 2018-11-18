@@ -1,5 +1,5 @@
 wifi_init.o: \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/wifi_init.c \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/wifi_init.c \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/string.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/_ansi.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/newlib.h \
@@ -19,7 +19,7 @@ wifi_init.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdint.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -169,7 +169,7 @@ wifi_init.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -390,4 +390,4 @@ wifi_init.o: \
 /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/lwip/include/lwip/lwip/dns.h:
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/main/./wifi_init.c:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/./wifi_init.c:

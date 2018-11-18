@@ -35,5 +35,6 @@ CFLAGS+=-ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongca
 CFLAGS+=-Wno-old-style-declaration
 
 CFLAGS+=-Os
+CFLAGS += -D_SAVE_FILE_
 
 #CFLAGS+= -Wno-address

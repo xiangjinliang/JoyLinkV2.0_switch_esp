@@ -6,7 +6,7 @@
 ARCH=arm
 CHIP=esp32
 #=======  EDITER =============
-PROJECT_ROOT_PATH:=/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP
+PROJECT_ROOT_PATH:=/home/jdwl/V2.0/JoyLinkV2.0_switch_esp
 
 #======= TARGET =======
 TARGET_BIN=${PROJECT_ROOT_PATH}/target/bin
