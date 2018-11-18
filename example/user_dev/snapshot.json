@@ -1,0 +1,10 @@
+{
+	"user_dev":
+		[
+			{
+				"stream_id":"Power",
+				"value_type":"int",
+				"value_init":"1"
+            }
+		]
+}
