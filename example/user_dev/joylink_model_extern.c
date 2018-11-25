@@ -47,11 +47,11 @@ jl2_d_idt_t user_idt =
 	.type = 0,
 	.cloud_pub_key = IDT_CLOUD_PUB_KEY,
 
-	.sig = "01234567890123456789012345678901",
-	.pub_key = "01234567890123456789012345678901",
+	.sig = "01234567890123456789012345678999",
+	.pub_key = "01234567890123456789012345678999",
 
 	.f_sig = "01234567890123456789012345678901",
-	.f_pub_key = "01234567890123456789012345678901",
+	.f_pub_key = "01234567890123456789012345678999",
 };
 
 /*E_JLDEV_TYPE_GW*/
@@ -79,14 +79,16 @@ joylink_dev_get_random()
     /**
      *FIXME:must to do
      */
-
+#if 0
     static int inited = 0;        
     if (!inited) {
         srand((unsigned int)time(NULL));
         inited = 1;
     }
-	log_info("get device rand,by xjl");
-    return rand();
+#endif
+	int rd = rand();
+	log_info("get device rand,by xjl,rand(%u)",rd);
+    return rd;
 }
 
 /**
@@ -349,7 +351,7 @@ joylink_dev_get_jlp_info(JLPInfo_t *jlp)
 	memset(&fjlp, 0, sizeof(JLPInfo_t));
 
 #ifdef _SAVE_FILE_
-	FILE *infile;
+	FILE *infile = NULL;
 	infile = fopen(file, "rb+");
 	if(infile != NULL)
     {	
