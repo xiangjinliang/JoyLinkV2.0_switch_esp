@@ -120,7 +120,12 @@ joylink_is_usr_timestamp_ok(char *usr, uint32_t org_timestamp)
             }else{
                 log_error("timstamp error:->%s\n", usr);
                 log_error("usr timestamp:%u, cache timestamp:%u\n", timestamp, _g_UT[i].timestamp);
+				#if 0  // by xjl test
                 return 0;
+				#else				
+                log_error("usr timestamp:%u, cache timestamp:%u,change to ok,by xjl.\n", timestamp, _g_UT[i].timestamp);
+				return 1;
+				#endif
             }
         }
     }

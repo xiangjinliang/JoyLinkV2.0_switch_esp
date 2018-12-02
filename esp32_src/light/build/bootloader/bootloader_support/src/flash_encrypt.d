@@ -3,7 +3,7 @@ src/flash_encrypt.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_err.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/bootloader/../include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/bootloader/../include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/include_priv/bootloader_random.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
@@ -33,7 +33,7 @@ src/flash_encrypt.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/bootloader/../include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/bootloader/../include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/include_priv/bootloader_random.h:
 

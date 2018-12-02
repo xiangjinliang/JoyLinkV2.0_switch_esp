@@ -24,7 +24,7 @@ src/nvs_page.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/sched.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/stdio.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/platform_include/assert.h \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdlib.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/alloca.h \
@@ -84,7 +84,7 @@ src/nvs_page.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdlib.h:
 

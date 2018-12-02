@@ -5,7 +5,7 @@ esp32/rtc_pm.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/features.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/platform_include/assert.h \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdlib.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/_ansi.h \
@@ -37,7 +37,7 @@ esp32/rtc_pm.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdlib.h:
 

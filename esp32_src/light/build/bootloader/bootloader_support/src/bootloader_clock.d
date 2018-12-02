@@ -13,7 +13,7 @@ src/bootloader_clock.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/bootloader/../include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/bootloader/../include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h
 
@@ -43,7 +43,7 @@ src/bootloader_clock.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/bootloader/../include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/bootloader/../include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 

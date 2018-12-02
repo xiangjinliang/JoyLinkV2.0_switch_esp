@@ -316,7 +316,7 @@ joylink_dev_sub_unbind(const char *feedid)
      *FIXME: todo must lock
      */
     int ret = E_RET_OK;
-    log_debug("feedid:%s\n", feedid);
+    log_debug("unbind feedid:%s\n", feedid);
 
     return ret;
 }

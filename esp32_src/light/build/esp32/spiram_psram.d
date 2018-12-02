@@ -1,6 +1,6 @@
 spiram_psram.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/spiram_psram.c \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/string.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/_ansi.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/newlib.h \
@@ -60,7 +60,7 @@ spiram_psram.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/queue.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/driver/include/driver/periph_ctrl.h
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/string.h:
 

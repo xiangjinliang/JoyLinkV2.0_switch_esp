@@ -737,13 +737,14 @@ joylink_proc_server_ota_upload(uint8_t* json)
  * @Returns: 
  */
 int
-joylink_server_recv(char fd, char *rec_buff, int max)
+joylink_server_recv(int fd, char *rec_buff, int max)
 {
     JLPacketHead_t head;
     bzero(&head, sizeof(head));
     E_PT_REV_ST_t st = E_PT_REV_ST_MAGIC;
     int ret;
     
+    log_info("sever_receive fd(%d),by xjl\n",fd);
     do{
         switch(st){
             case E_PT_REV_ST_MAGIC:
@@ -751,12 +752,16 @@ joylink_server_recv(char fd, char *rec_buff, int max)
                 if(head.magic == 0x123455CC){
                     st = E_PT_REV_ST_HEAD;
                 }
+				
+				log_info("sever_receive fd(%d),ret(%d),st(%d),by xjl\n",fd,ret,st);
                 break;
             case E_PT_REV_ST_HEAD:
                 ret = recv(fd, &head.optlen, sizeof(head) - sizeof(head.magic), 0);
                 if(ret > 0){
                     st = E_PT_REV_ST_DATA;
                 }
+				
+				log_info("sever_receive fd(%d),ret(%d),st(%d),by xjl\n",fd,ret,st);
                 break;
             case E_PT_REV_ST_DATA:
                 if(head.optlen + head.payloadlen < max - sizeof(head)){
@@ -766,6 +771,8 @@ joylink_server_recv(char fd, char *rec_buff, int max)
                         ret = ret + sizeof(head);
                         st = E_PT_REV_ST_END;
                     }
+					
+					log_info("sever_receive fd(%d),ret(%d),st(%d),by xjl\n",fd,ret,st);
 
                 }else{
                     ret = -1;
@@ -780,6 +787,7 @@ joylink_server_recv(char fd, char *rec_buff, int max)
     if (ret == -1 || ret == 0){
         return -1;
     }
+	log_info("sever_receive fd(%d),ret(%d),st(%d),end,by xjl\n",fd,ret,st);
 
     return ret;
 }
@@ -793,6 +801,8 @@ joylink_proc_server()
     uint8_t recBuffer[JL_MAX_PACKET_LEN * 2 ] = { 0 };
     uint8_t recPainText[JL_MAX_PACKET_LEN * 2 + 16] = { 0 };
     int ret;
+
+	log_info("begin to receive server rsp, fd(%u)!\r\n",_g_pdev->server_socket);
 
     ret = joylink_server_recv(_g_pdev->server_socket, (char*)recBuffer, JL_MAX_PACKET_LEN * 2);
     if (ret == -1 || ret == 0){

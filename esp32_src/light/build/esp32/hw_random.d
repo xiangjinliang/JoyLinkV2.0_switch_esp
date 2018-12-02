@@ -22,7 +22,7 @@ hw_random.o: /home/jdwl/ESP32/IDF/esp-idf/components/esp32/hw_random.c \
  /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_assert.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/platform_include/assert.h \
- /home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdlib.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/alloca.h \
@@ -88,7 +88,7 @@ hw_random.o: /home/jdwl/ESP32/IDF/esp-idf/components/esp32/hw_random.c \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/jdwl/V2.0/joylink_dev_sdk_C_2.0.8_ESP/esp32_src/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdlib.h:
 

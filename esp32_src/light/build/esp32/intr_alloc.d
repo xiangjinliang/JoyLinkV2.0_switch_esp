@@ -1,5 +1,5 @@
 intr_alloc.o: /home/jdwl/ESP32/IDF/esp-idf/components/esp32/intr_alloc.c \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdint.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/features.h \
@@ -82,7 +82,7 @@ intr_alloc.o: /home/jdwl/ESP32/IDF/esp-idf/components/esp32/intr_alloc.c \
  /home/jdwl/ESP32/IDF/esp-idf/components/log/include/esp_log.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/log/include/esp_log_internal.h
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdint.h:
 

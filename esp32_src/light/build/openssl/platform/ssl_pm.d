@@ -26,7 +26,7 @@ platform/ssl_pm.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdint.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/log/include/esp_log.h \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_assert.h \
@@ -133,7 +133,7 @@ platform/ssl_pm.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/log/include/esp_log.h:
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/ets_sys.h:
 

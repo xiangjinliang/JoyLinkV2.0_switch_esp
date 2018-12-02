@@ -11,7 +11,7 @@ extern "C"{
  * user set
  */
 #define JLP_VERSION  1
-#define JLP_MAC "60:50:40:30:20:99"
+#define JLP_MAC "27:50:40:30:20:99"
 /*
  * Create dev and get the index from developer center
  */

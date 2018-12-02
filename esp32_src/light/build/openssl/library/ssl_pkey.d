@@ -9,7 +9,7 @@ library/ssl_pkey.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/openssl/include/internal/ssl_methods.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/openssl/include/internal/ssl_dbg.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/openssl/include/platform/ssl_opt.h \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/openssl/include/platform/ssl_port.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_types.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/sys/cdefs.h \
@@ -61,7 +61,7 @@ library/ssl_pkey.o: \
 
 /home/jdwl/ESP32/IDF/esp-idf/components/openssl/include/platform/ssl_opt.h:
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/openssl/include/platform/ssl_port.h:
 

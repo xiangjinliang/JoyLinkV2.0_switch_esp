@@ -185,7 +185,7 @@ void app_main()
 
     initialise_wifi();
 
-    xTaskCreate(&runJoylink, "runJoylink", 10240, NULL, 5, NULL);
+    xTaskCreate(&runJoylink, "runJoylink", 20240, NULL, 5, NULL);
     
     xTaskCreate(&runPrintLocalIP, "runPrintLocalIP", 4096, NULL, 5, NULL);
 

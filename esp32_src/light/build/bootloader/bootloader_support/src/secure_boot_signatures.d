@@ -1,6 +1,6 @@
 src/secure_boot_signatures.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/src/secure_boot_signatures.c \
- /home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/bootloader/../include/sdkconfig.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/bootloader/../include/sdkconfig.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/esp_err.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/spi_flash/include/esp_spi_flash.h \
@@ -19,7 +19,7 @@ src/secure_boot_signatures.o: \
  /home/jdwl/ESP32/IDF/esp-idf/components/micro-ecc/micro-ecc/uECC.h \
  /home/jdwl/ESP32/IDF/esp-idf/components/esp32/include/rom/sha.h
 
-/home/jdwl/V3.0/joylink_v3.0.0_ESP32/ESP32Prj/light/build/bootloader/../include/sdkconfig.h:
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/build/bootloader/../include/sdkconfig.h:
 
 /home/jdwl/ESP32/IDF/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h:
 
