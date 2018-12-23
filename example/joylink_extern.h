@@ -38,7 +38,13 @@ extern "C"{
 //#define JLP_UUID "55A484" //test_2
 //#define IDT_CLOUD_PUB_KEY "03B637049598B1F7A17E9242C0802862806C601CB613C749501CD778C0C97E152E"
 
-
+typedef struct __jdV2SetDevCtrl{
+	int (*dev_get_net_st)(void);	
+	void (*dev_set_connect_st)(int state);
+	int (*dev_user_data_get)(void *user_data);	
+	int (*dev_user_data_set)(void *user_data);
+}JDV2_SET_DEV_CTRL;
+void initDevCtrl(JDV2_SET_DEV_CTRL *devCtrl);
 
 #define USER_DATA_POWER   "Power"
 

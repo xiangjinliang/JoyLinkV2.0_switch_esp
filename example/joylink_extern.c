@@ -72,6 +72,22 @@ char  *file = "joylink_info.txt";
 extern int joylink_parse_jlp(JLPInfo_t *jlp, char * pMsg);
 extern int joylink_util_cut_ip_port(const char *ipport, char *out_ip, int *out_port);
 
+JDV2_SET_DEV_CTRL devCtrlSets = {0};
+
+void initDevCtrl(JDV2_SET_DEV_CTRL *devCtrl)
+{
+	if (NULL == devCtrl)
+	{		
+		log_info("initDevCtrl failed,the param is null,by xjl.");
+		return;
+	}
+	devCtrlSets.dev_get_net_st = devCtrl->dev_get_net_st;
+	devCtrlSets.dev_set_connect_st = devCtrl->dev_set_connect_st;
+	devCtrlSets.dev_user_data_get = devCtrl->dev_user_data_get;
+	devCtrlSets.dev_user_data_set = devCtrl->dev_user_data_set;
+}
+
+
 /**
  * brief: 
  *
@@ -108,9 +124,15 @@ joylink_dev_is_net_ok()
     /**
      *FIXME:must to do
      */
-     
+    
 	log_info("this device is ok,by xjl");
-    return E_RET_TRUE;
+    if (devCtrlSets.dev_get_net_st != NULL)
+    {
+		return devCtrlSets.dev_get_net_st();
+	}
+	
+	log_info("this device is err,by xjl");
+    return E_RET_FAIL;
 }
 
 /**
@@ -129,7 +151,10 @@ joylink_dev_set_connect_st(int st)
 	char buff[64] = {0};
 	int ret = 0;
 	log_info("set device status,by xjl");
-
+	if(devCtrlSets.dev_set_connect_st != NULL)
+	{
+		devCtrlSets.dev_set_connect_st(st);
+	}
 	sprintf(buff, "{\"conn_status\":\"%d\"}", st);
 	log_info("--set_connect_st:%s\n", buff);
 
@@ -459,6 +484,10 @@ joylink_dev_user_data_get(user_dev_status_t *user_data)
 	/**
 	*FIXME:must to do
 	*/
+	if (devCtrlSets.dev_user_data_get != NULL)
+	{
+		return devCtrlSets.dev_user_data_get(user_data);
+	}
 	user_data->Power = userData;
     
 	log_info("this device joylink_dev_user_data_get(%d),by xjl",user_data->Power);
@@ -569,7 +598,10 @@ joylink_dev_user_data_set(user_dev_status_t *user_data)
 	/**
 	*FIXME:must to do
 	*/
-	
+	if (devCtrlSets.dev_user_data_set != NULL)
+	{
+		return devCtrlSets.dev_user_data_set(user_data);
+	}
 	userData = user_data->Power;
 	log_info("set device value(%u).by xjl",user_data->Power);
 	return 0;

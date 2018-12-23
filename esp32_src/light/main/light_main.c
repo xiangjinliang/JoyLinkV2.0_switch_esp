@@ -55,7 +55,7 @@
 #include "joylink_utils.h"
 #include "joylink_sdk.h"
 #include "joylink_task.h"
-
+#include "ioCtrlDevice.h"
 #if 1
 /* 初始化SPI文件系统 */
 int initvfs_Spiffs(void)
@@ -132,6 +132,9 @@ static void runJoylink(void *pvParameters)
     //initialize_filesystem();
     initvfs_Spiffs();
 
+	/* init devctrl*/
+	initGpioCtrlDevice();
+
     /*
      *Start main loop
      */     
@@ -184,6 +187,7 @@ void app_main()
     printf("main task init...\n");
 
     initialise_wifi();
+
 
     xTaskCreate(&runJoylink, "runJoylink", 20240, NULL, 5, NULL);
     

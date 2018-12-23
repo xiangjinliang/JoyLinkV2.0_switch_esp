@@ -166,7 +166,8 @@ light_main.o: \
  /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_rpc.h \
  /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_app_cb.h \
  /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_utils.h \
- /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_task.h
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_task.h \
+ /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/ioCtrlDevice.h
 
 /home/jdwl/ESP32/IDF/esp-idf/components/newlib/include/stdio.h:
 
@@ -501,4 +502,6 @@ light_main.o: \
 /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_utils.h:
 
 /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/include/joylink_task.h:
+
+/home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/ioCtrlDevice.h:
 /home/jdwl/V2.0/JoyLinkV2.0_switch_esp/esp32_src/light/main/./light_main.c:
